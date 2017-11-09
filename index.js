@@ -7,8 +7,8 @@ var io = require('socket.io')(http);
 // app.get('/', function(req, res){
 // 	res.send('<h1>Welcome Realtime Server</h1>');
 // });
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'jade');
 
 app.use(express.static(path.join(__dirname, 'public'))); //设置静态文件目录
 //在线用户
@@ -68,3 +68,10 @@ http.listen(3001, function(){
 });
 // app.use(bodyParser.json());//解析json数据格式的
 // app.use(bodyParser.urlencoded({ extended: false }));//解析form表单提交的数据 querystring(false，不能解析复杂的对象) qs(true,用来解析复杂的对象)
+// const express = require('express');
+// const app = express();
+// const http = require('http');
+// const server = http.Server(app);
+// const io = require('socket.io')(server)；
+// app.set('views', )
+// app.use(express.static(path.join(__dirname + 'public')));
